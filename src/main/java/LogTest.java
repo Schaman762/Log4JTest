@@ -10,6 +10,6 @@ public class LogTest {
         logger.info("info lvl logger");
     }
     public void errorLevel(){
-        logger.error("error level from LogTest");
+        logger.error("error level ");
     }
 }
