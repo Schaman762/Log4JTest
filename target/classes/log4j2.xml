@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <File name="File" fileName="c:/log/myapp.log">
+            <PatternLayout
+                    pattern="%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+        <File name="File2" fileName="c:/log/myapp2.log">
+            <PatternLayout
+                    pattern="%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+        <Console name="Console">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File2"/>
+        </Root>
+        <logger name="com.Log4JTest.LogTest" level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </logger>
+        <logger name="com.Log4JTest.LogTest2" level="TRACE">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File2"/>
+        </logger>
+
+    </Loggers>
+
+</Configuration>
