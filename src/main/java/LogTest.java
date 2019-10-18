@@ -9,7 +9,7 @@ public class LogTest {
     public void infoLevel(){
         logger.info("info lvl logger");
     }
-    public void errorLevel(){
-        logger.error("error level ");
+    public void errorLevel(){ logger.error("error level ");
     }
+
 }
