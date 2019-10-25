@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration>
+<Configuration >
     <Appenders>
         <File name="File" fileName="c:/log/myapp.log">
             <PatternLayout
@@ -14,16 +14,11 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Root level="DEBUG">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="File2"/>
-        </Root>
-        <logger name="com.Log4JTest.LogTest" level="INFO">
-            <AppenderRef ref="Console"/>
+
+        <logger name="LogTest" level="ERROR">
             <AppenderRef ref="File"/>
         </logger>
-        <logger name="com.Log4JTest.LogTest2" level="TRACE">
-            <AppenderRef ref="Console"/>
+        <logger name="LogTest2" level="TRACE">
             <AppenderRef ref="File2"/>
         </logger>
 
